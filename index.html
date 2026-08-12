@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/menu.css">
+  <link rel="stylesheet" href="/hero.css">
 </head>
 <body>
   <header class="site-header">
@@ -33,18 +35,15 @@
       <p>Nuestro espacio combina sabor, calma y hospitalidad. Ven a desayunar, encontrarte con amigos o trabajar cómodamente con conexión Starlink.</p>
       <div class="features"><span>☕ Café seleccionado</span><span>🍳 Cocina al momento</span><span>✦ Wi-Fi Starlink</span></div>
     </div></section>
-    <section class="menu-section" id="menu"><div class="section-heading"><p class="eyebrow dark">Favoritos de la casa</p><h2>Algo rico para cada antojo.</h2><p>Una selección de nuestro menú. Precios en pesos mexicanos.</p></div>
-      <div class="menu-grid"><article class="menu-card drinks-card"><div class="menu-card-heading"><span>01</span><h3>Café & bebidas</h3></div><div class="menu-list">
-        <div class="menu-row"><span>Cappuccino</span><strong>$60</strong></div><div class="menu-row"><span>Latte vainilla</span><strong>$70</strong></div><div class="menu-row"><span>Café moca</span><strong>$80</strong></div><div class="menu-row"><span>Flat white</span><strong>$70</strong></div><div class="menu-row"><span>Frappuccino Nutella</span><strong>$100</strong></div><div class="menu-row"><span>Carajillo</span><strong>$130</strong></div>
-      </div><p class="menu-note">Leche vegetal +$15 · Shot de café +$30 · Sabores desde +$10</p></article>
-      <article class="menu-card"><div class="menu-card-heading"><span>02</span><h3>Desayunos</h3></div><div class="menu-list detailed">
-        <div class="dish"><div><h4>Chilaquiles rojos o verdes</h4><p>Con huevo, pollo o chorizo; crema, queso y cebolla.</p></div><strong>$120</strong></div>
-        <div class="dish"><div><h4>Enchiladas</h4><p>Rellenas de pollo, bañadas en mole y acompañadas de arroz.</p></div><strong>$180</strong></div>
-        <div class="dish"><div><h4>Desayuno completo</h4><p>Huevos al gusto, fruta, café y jugo del día.</p></div><strong>$190</strong></div>
-        <div class="dish"><div><h4>Avocado toast</h4><p>Pan artesanal, aguacate, huevo y ensalada fresca.</p></div><strong>$140</strong></div>
-        <div class="dish"><div><h4>AvoGato toast serrano</h4><p>La versión de la casa con un toque de chile serrano.</p></div><strong>$160</strong></div>
-        <div class="dish"><div><h4>Hotcakes especiales</h4><p>Con fruta, crema de avellana y un toque dulce.</p></div><strong>$150</strong></div>
-      </div></article></div>
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><p class="eyebrow dark">Nuestro menú</p><h2>Explora todos nuestros sabores.</h2><p>Elige bebidas o alimentos y después selecciona una categoría. Precios en pesos mexicanos.</p></div>
+      <div class="menu-explorer" id="menuExplorer">
+        <div class="menu-main-tabs" role="tablist" aria-label="Secciones del menú">
+          <button class="menu-main-tab active" type="button" data-section="bebidas" role="tab" aria-selected="true"><span>☕</span><strong>Bebidas</strong><small>Calientes, frías, jugos y más</small></button>
+          <button class="menu-main-tab" type="button" data-section="alimentos" role="tab" aria-selected="false"><span>🍳</span><strong>Alimentos</strong><small>Desayunos, antojitos y pan</small></button>
+        </div>
+        <div class="menu-browser"><div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Categorías"></div><div class="menu-results"><div class="menu-results-heading"><div><p class="menu-path" id="menuPath"></p><h3 id="categoryTitle"></h3></div><span id="itemCount"></span></div><div class="full-menu-list" id="menuItems"></div></div></div>
+      </div>
     </section>
     <section class="gallery"><div class="gallery-title"><p class="eyebrow">Momentos Gato Negro</p><h2>Café, desayuno y buena compañía.</h2></div><img class="gallery-wide" src="/assets/gallery-1.jpg" alt="Amigos compartiendo café"><img src="/assets/gallery-2.jpg" alt="Café recién servido"><img src="/assets/gallery-3.jpg" alt="Preparación de café"><img src="/assets/gallery-4.jpg" alt="Una taza de café"></section>
     <section class="visit" id="visitanos"><div><p class="eyebrow dark">Haz una pausa</p><h2>Tu mesa te espera en Puerto Escondido.</h2><p>Ven por tu café de siempre, descubre un nuevo desayuno o instala tu oficina por unas horas.</p><a class="button dark-button" href="https://maps.app.goo.gl/wjqzTexQtbtaT2Nb9" target="_blank" rel="noreferrer">Ver ubicación y ruta</a></div>
@@ -52,4 +51,5 @@
     </section>
   </main>
   <footer><a class="brand" href="#inicio"><img src="/assets/logo.png" alt=""><span>Gato Negro</span></a><p>Café y desayunos en Puerto Escondido, Oaxaca.</p><p>© 2026 Café Gato Negro</p></footer>
+  <script src="/menu.js"></script>
 </body></html>
